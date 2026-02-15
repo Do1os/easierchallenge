@@ -3,7 +3,7 @@
   "name": "easierchallenge",
   "version": "1.0",
 
-  "description": "Adds a red border to all webpages matching mozilla.org.",
+  "description": "simple extension that uses gemini api to generate code for hackerrank problems",
    
   "browser_specific_settings": {
   "gecko": {

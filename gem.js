@@ -8,7 +8,7 @@ btn.onclick = async () =>{
 
     btn.classList.add('loading');
     const curr_url = window.location.href;
-    const prompt = `return only the code for the following hackerrank problem in cpp , no comments, give simple codes :${curr_url}`;
+    const prompt = `return the code for the following hackerrank problem in cpp without comments , retunr the code that i should put inside the function that has been created in the code editor :${curr_url}` ;
     const cleankey = apikey.trim();
 
     try{const data = await browser.runtime.sendMessage({
