@@ -4,9 +4,17 @@
   "version": "1.0",
 
   "description": "Adds a red border to all webpages matching mozilla.org.",
-
+   
+  "browser_specific_settings": {
+  "gecko": {
+    "id": "@thisismyeasierchallenge_extension",
+    "data_collection_permissions": { 
+        "required":["none"]
+    }
+}
+},
   "icons": {
-    "48": "icons/border-48.png"
+    "48": "border-48.png"
   },
   "browser_action":{
     "default_icon":"border-48.png",
@@ -14,15 +22,21 @@
     "default_title":"easierchallenge"
   },
 
-  "hostpermissions":["*://*.hackerrank.com/contests/*/*/*"],
+  "hostpermissions":["*://*.hackerrank.com/contests/*" , "https://generativelanguage.googleapis.com/*"],
 
   "permissions":["activeTab","storage","clipboardWrite"],
 
   "content_scripts": [
     {
-      "matches": ["*://*.hackerrank.com/contests/*/*/*"],
+      "matches": ["*://*.hackerrank.com/contests/*"],
       "js": ["gem.js"],
       "css":["styles.css"]
     }
-  ]
+  ],
+
+  "background":{
+    "scripts":["background.js"],
+    "persistent":false 
+ }
 }
+  
